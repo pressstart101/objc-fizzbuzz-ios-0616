@@ -5,6 +5,26 @@
 @implementation FISAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSUInteger strart = 100;
+    NSUInteger limit = 130;
+    
+    for (NSUInteger i = strart; i <= limit; i++) {
+        NSString *result = @"";
+        
+        if (i % 3 == 0 && i % 5 == 0) {
+            result = @"FizzBuzz";
+        }
+        else if (i % 3 == 0){
+            result = @"Fizz";
+        }
+        else if (i % 5 == 0){
+            result = @"Buzz";
+        }
+        else {
+            result = [NSString stringWithFormat:@"%lu", i];
+        }
+        NSLog(@"%@", result);
+    }
     // Override point for customization after application launch.
     
     /*
